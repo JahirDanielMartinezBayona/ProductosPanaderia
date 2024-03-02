@@ -1,44 +1,51 @@
-menuGeneral=dict({
-    "PANES":{
-        "Producto":list([
-           {"Nombre": "PAN BLANCO", "cuesta":3200}, 
-           {"Nombre": "PAN INTEGRAL", "cuesta":2800}, 
-           {"Nombre": "PAN DE CENTENO", "cuesta":3500}, 
-           {"Nombre": "PAN DE OLIVA", "cuesta":4500},
-           {"Nombre": "PAN DE MAIZ", "cuesta":5500}, 
-           {"Nombre": "PAN ARABE", "cuesta":5000}, 
-           {"Nombre": "PAN ESPELTA", "cuesta":5700}, 
-        ]),
-        "Promociones":list([
+#---  Categoria ---
+#1) Pan Barra o Pistola
+panBarraPistola = list([{"Nombre": "PAN BLANCO", "cuesta":3200}, 
+{"Nombre": "PAN CANDEAL", "cuesta":2800}, 
+{"Nombre": "PAN RÚSTICO", "cuesta":3500}])
+
+promocionPanBarraPistola = list([
            {"Codigo": 4, "descuento": "Descuento A", "valor":0.2}, 
            {"Codigo": 8, "descuento": "Descuento B", "valor":0.15},
-        ]),
-    },
-    "BOLLERIA":{
-        "Producto":list([
-           {"Nombre": "DONAS", "cuesta":2500},
-           {"Nombre": "CROAISSANTS", "cuesta":2800},
-           {"Nombre": "TARTEL", "cuesta":5000},
-           {"Nombre": "MARAÑUELA", "cuesta":4800},
-           {"Nombre": "CONSAIMADA", "cuesta":4200},
-        ]),
-        "Promociones":list([
+        ])
+#2) Pan Integral
+panIntegral = list([
+           {"Nombre": "MULTICEREALES", "cuesta":2500},
+           {"Nombre": "TRIGO BLANCO", "cuesta":2800},
+           {"Nombre": "NUECES Y PASAS", "cuesta":5000},
+           {"Nombre": "AVENA Y MIEL", "cuesta":4800},
+           {"Nombre": "SALVADO", "cuesta":4200},
+        ])
+promocionPanIntegral = list([
            {"Codigo": 1, "descuento": "Descuento C", "valor":0.18},
            {"Codigo": 4, "descuento": "Descuento D", "valor":0.2}, 
-        ]),
-    },
-    "TARTAS":{
-        "Producto":list([
-           {"Nombre": "TARTA MOUSSE DE CHOCOLATE", "cuesta":14000},
-           {"Nombre": "TARTA DE FRESA", "cuesta":12000},
-           {"Nombre": "CHEESECAKE DE JENGIBRE", "cuesta":9000},
-           {"Nombre": "TARTA ARABE", "cuesta":10000},
-           {"Nombre": "TARTA DE PERAS", "cuesta":12000},
-          ]),
-          "Promociones":list([
+        ])
+#3) ESPECIALES O GOURMET
+panEspecialesGourmet = list([
+           {"Nombre": "BAGUETTE PARISIENNE", "cuesta":14000},
+           {"Nombre": "BATARD", "cuesta":12000},
+           {"Nombre": "MANTOU", "cuesta":9000},
+           {"Nombre": "MOGOLLÓN DE SEMILLAS POR FUERA", "cuesta":10000},
+           {"Nombre": "DE CÚRCUMA Y PIPAS DE CALABAZA", "cuesta":12000},
+          ])
+
+promocionPanEspecialesGourmet = list([
            {"Codigo": 7, "descuento": "Descuento E", "valor":0.1},
            {"Codigo": 9, "descuento": "Descuento F", "valor":0.25}, 
-        ]),
+        ])
+
+menuGeneral=dict({
+    "BARRA O PISTOLA":{
+        "Producto":panBarraPistola,
+        "Promociones":promocionPanBarraPistola,
+    },
+    "INTEGRAL":{
+        "Producto":panIntegral,
+        "Promociones":promocionPanIntegral,
+    },
+    "ESPECIALES O GOURMET":{
+        "Producto":panEspecialesGourmet,
+          "Promociones":promocionPanEspecialesGourmet,
     },
 })
 print("BIENVENIDO A ENJOYBREAD, LA PANADERÍA NÚMERO UNO EN SABOR DE LEVADURA")
